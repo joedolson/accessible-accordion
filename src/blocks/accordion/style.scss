@@ -1,0 +1,28 @@
+/*
+* Style Works for both Editor and Frontend
+*/
+.wp-block-ab-accordion {
+	.ab__accordion {
+		&-labels {
+			margin: 0;
+			padding: 0;
+		}
+		&-content {
+			.ab_accordion-panel {
+				display: none;
+				&.active {
+					display: block;
+				}
+			}
+		}
+	}
+	div .ab_accordion-header[aria-expanded="true"] {
+		position: relative;
+	}
+	div .ab_accordion-header[aria-expanded="true"]:after {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		content: "+";
+	}
+}

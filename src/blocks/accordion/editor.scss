@@ -1,0 +1,26 @@
+/*
+* Style Works for Editor Only
+*/
+div.wp-block-ab-accordions {
+	border: 1px dashed #aaa;
+	padding: 15px;
+}
+.wp-block-ab-accordions .ab_accordion-header {
+	padding: 10px;
+	border: 1px solid #444;
+	margin: 0 !important;
+	background: rgba( 0, 0, 0, .03 );
+	display: grid;
+	grid-template-columns: auto 2rem;
+}
+.wp-block-ab-accordions .ab_accordion-header > .wp-block {
+	width: 100%;
+}
+div[data-type="ab/accordion"] {
+	margin-top: 4px;
+	margin-bottom: 0;
+}
+.ab__inner_blocks {
+	border: 1px solid #444 !important;
+	padding: 10px;
+}

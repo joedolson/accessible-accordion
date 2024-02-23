@@ -1,0 +1,17 @@
+{
+  "apiVersion": 2,
+  "name": "ab/accordions",
+  "version": "1.0.0",
+  "title": "Accessible Accordion",
+  "category": "ab-block",
+  "description": "Display content in accessible accordions",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "customClassName": true
+  },
+  "textdomain": "accordion-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
