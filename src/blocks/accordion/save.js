@@ -1,7 +1,6 @@
 import { useBlockProps, InnerBlocks, RichText } from '@wordpress/block-editor';
 
 export default function save({ attributes }) {
-
 	const blockProps = useBlockProps.save({
 		className: `ab_accordion`,
 	});

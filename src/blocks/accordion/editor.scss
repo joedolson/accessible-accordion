@@ -12,6 +12,10 @@ div.wp-block-ab-accordions {
 	background: rgba( 0, 0, 0, .03 );
 	display: grid;
 	grid-template-columns: auto 2rem;
+	align-items: center;
+}
+.wp-block-ab-accordions .ab_accordion-header > span {
+	justify-self: end;
 }
 .wp-block-ab-accordions .ab_accordion-header > .wp-block {
 	width: 100%;

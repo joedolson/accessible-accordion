@@ -1,6 +1,6 @@
+import { registerBlockType } from '@wordpress/blocks';
 import { InnerBlocks } from '@wordpress/block-editor';
 const { __ } = wp.i18n;
-const { registerBlockType } = wp.blocks;
 
 registerBlockType( 'ab/accordion', {
 	title: __( 'Accordion', 'accordion-block' ),
@@ -18,7 +18,7 @@ registerBlockType( 'ab/accordion', {
 	keywords: [
 		__('accordion', 'accordion-block'),
 	],
-	edit: ({ className }) => {
+	edit({ className }) {
 		return (
 			<div className={className}>
 				<div className={`ab__inner_blocks ` + className + '_inner'}>
@@ -29,7 +29,7 @@ registerBlockType( 'ab/accordion', {
 			</div>
 		);
 	},
-	save: () => {
+	save() {
 		return (
 			<div className="ab__accordion-panel">
 				<div className="ab__accordion-content">

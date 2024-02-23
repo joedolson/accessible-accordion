@@ -10,6 +10,13 @@
     "anchor": true,
     "customClassName": true
   },
+  "attributes": {
+    "content": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2"
+    }
+  },
   "textdomain": "accordion-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",

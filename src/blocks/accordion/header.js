@@ -1,13 +1,13 @@
+import { registerBlockType } from '@wordpress/blocks';
 import { RichText, useBlockProps } from '@wordpress/block-editor';
 const { __ } = wp.i18n;
-const { registerBlockType } = wp.blocks;
 
 registerBlockType( 'ab/accordion-header', {
 	title: __( 'Accordion', 'accordion-block' ),
 	description: __('Accordion header.', 'accordion-block'),
 	supports: {
-		html: false,
-		customClassName: false,
+		html: true,
+		customClassName: true,
 	},
 	icon: {
 		foreground: '#333',
@@ -25,8 +25,8 @@ registerBlockType( 'ab/accordion-header', {
 	keywords: [
 		__('accordion', 'accordion-block'),
 	],
-	edit: ({ className }) => {
-		const blockProps       = useBlockProps();
+	edit({ attributes, setAttributes, className }) {
+		const blockProps         = useBlockProps();
 		const updateContentValue = ( val ) => {
 			setAttributes( { content: val } );
 		}
@@ -44,7 +44,7 @@ registerBlockType( 'ab/accordion-header', {
 				</div>
 		);
 	},
-	save: () => {
+	save( { attributes } ) {
 		const blockProps = useBlockProps.save();
 
 		return (
