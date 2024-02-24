@@ -9,28 +9,23 @@ function accordion_callback( $attributes ) {
 	/**
 	 * Normal CSS
 	 */
-	.ab_accordion-label {
+	.ab_accordion-header h2,
+	.ab_accordion-header h3,
+	.ab_accordion-header h4 {
+		margin: 0 auto .5rem;
+	}
+	.ab_accordion-header button {
 		all: unset;
-	}
-	.ab_accordion-labels {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+		border: 1px solid #1d2327;
+		width: calc( 100% - 16px );
+		padding: 8px;
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
-	.ab_accordion-label {
-		padding: .25rem .5rem;
-		border-radius: 3px 3px 0 0;
-		border: 1px solid;
-		border-bottom: none;
-		position: relative;
-		bottom: -1px;
-		background: transparent;
-		color: #1d2327;
-	}
-	.ab_accordion-label:focus,
-	.ab_accordion-label:hover,
-	.ab_accordion-label[aria-selected="true"] {
+	.ab_accordion-header button:focus,
+	.ab_accordion-header button:hover,
+	.ab_accordion-header button[aria-expanded="true"] {
 		font-weight: 700;
 		color: #1d2327;
 		background: #fff;
@@ -40,6 +35,7 @@ function accordion_callback( $attributes ) {
 		padding: 1rem;
 		background: #fff;
 		color: #1d2327;
+		margin-bottom: .5rem;
 	}';
 
 	return $ab_css;

@@ -2,27 +2,32 @@
 * Style Works for both Editor and Frontend
 */
 .wp-block-ab-accordion {
-	.ab__accordion {
-		&-labels {
+	.ab_accordion {
+		&-header h2 {
 			margin: 0;
 			padding: 0;
 		}
-		&-content {
-			.ab_accordion-panel {
-				display: none;
-				&.active {
-					display: block;
-				}
+		&-header button {
+			all: unset;
+		}
+		&-panel {
+			display: none;
+			&.active {
+				display: block;
 			}
 		}
 	}
-	div .ab_accordion-header[aria-expanded="true"] {
+	div .ab_accordion-header {
 		position: relative;
 	}
-	div .ab_accordion-header[aria-expanded="true"]:after {
+	div .ab_accordion-header button::after {
 		position: absolute;
 		left: 0;
 		width: 100%;
 		content: "+";
+		font-size: 1.25rem;
+	}
+	div .ab_accordion-header button[aria-expanded="true"]::after {
+		content: "-";
 	}
 }
