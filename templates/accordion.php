@@ -4,7 +4,7 @@
  *
  * @param array $attributes Block attributes.
  */
-function accordion_callback( $attributes ) {
+function accordion_callback() {
 	$ab_css = '
 	/**
 	 * Normal CSS
@@ -26,9 +26,8 @@ function accordion_callback( $attributes ) {
 	.ab_accordion-header button:focus,
 	.ab_accordion-header button:hover,
 	.ab_accordion-header button[aria-expanded="true"] {
-		font-weight: 700;
-		color: #1d2327;
-		background: #fff;
+		outline: 2px solid;
+		outline-offset: 1px;
 	}
 	.ab_accordion-wrapper {
 		border: 1px solid;
