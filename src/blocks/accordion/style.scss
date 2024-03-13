@@ -39,11 +39,12 @@
 	.ab_accordion-header button {
 		all: unset;
 		border: 1px solid #1d2327;
-		width: calc( 100% - 16px );
+		width: 100%;
 		padding: 8px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		box-sizing: border-box;
 	}
 	.ab_accordion-header button:focus,
 	.ab_accordion-header button:hover,
