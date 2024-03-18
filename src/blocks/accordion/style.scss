@@ -51,6 +51,8 @@
 	.ab_accordion-header button[aria-expanded="true"] {
 		outline: 2px solid;
 		outline-offset: 1px;
+		color: #111;
+		background-color: rgba(0,0,0,.03);
 	}
 	.ab_accordion-wrapper {
 		display: none;
