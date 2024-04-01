@@ -24,17 +24,18 @@
 		position: absolute;
 		left: 0;
 		width: 100%;
-		content: "+";
+		content: '+';
+		font-weight: 700;
 		font-size: 1.25rem;
 	}
 	div .ab_accordion-header button[aria-expanded="true"]::after {
-		content: "-";
+		content: '-';
 	}
 }
 .ab_accordion-header h2,
 	.ab_accordion-header h3,
 	.ab_accordion-header h4 {
-		margin: 0 auto .5rem;
+		margin: 0 auto 0;
 	}
 	.ab_accordion-header button {
 		all: unset;
